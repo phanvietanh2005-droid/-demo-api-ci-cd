@@ -4,11 +4,9 @@ on: [push, pull_request]
 
 jobs:
   api-testing:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: 1. Checkout mã nguồn
         uses: actions/checkout@v4
 
@@ -21,4 +19,4 @@ jobs:
         run: npm install -g newman
 
       - name: 4. Chạy bộ Test tự động
-       run: newman run RestfulBooker_API_Collection.postman_collection.json -e RestfulBooker_Env.postman_environment.json
+        run: newman run RestfulBooker_API_Collection.postman_collection.json -e RestfulBooker_Env.postman_environment.json
